@@ -1,50 +1,29 @@
-# React + TypeScript + Vite
+# The Google Collab Link: [collab link](https://colab.research.google.com/drive/1lYKa7aeWkkQcBxrcUAk-ytR3sFIZ-Xew?usp=sharing) 
+(You should read the tutorial if you never used it before: [Google Collab Tuitorial](https://github.com/JoelIrawanLim/pptx-generator/wiki/Google-Collab-Tutorial))
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# The issue:
+During Remaja sessions, while preparing slides, the AVs have to painstakingly go about searching for scores. This is both inefficient and time-consuming, as the time spent on searching for songs is quite long. In addition, the version of the songs would not be accurate sometimes, or have incomplete/ invalid lyrics. 
+# The solution:
+We have come up with an app that generates powerpoint slides with music included. This can help to solve problems such having incomplete lyrics, inaccuracy and saves a lot of time.
 
-Currently, two official plugins are available:
+If you are not good with terminals and just want a simple and easy setup, We recommend you to use the [Zero-setup Method](https://github.com/JoelIrawanLim/pptx-generator?tab=readme-ov-file#zero-setup-method). 
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Otherwise, if you want to use it offline, the steps to install it on your computer can be found here. [Install Guide](https://github.com/JoelIrawanLim/pptx-generator?tab=readme-ov-file#installing-it-locally)
 
-## Expanding the ESLint configuration
+## Zero-setup method
+You can use google collab to run an easy to use an already setup version of this script. 
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Video Tutorial: (WIP)
 
-- Configure the top-level `parserOptions` property like this:
+Text Tutorial: [Google Collab Tuitorial](https://github.com/JoelIrawanLim/pptx-generator/wiki/Google-Collab-Tutorial)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Go to: [collab link](https://colab.research.google.com/drive/1lYKa7aeWkkQcBxrcUAk-ytR3sFIZ-Xew?usp=sharing)
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Click on the one in brackets ([1]). It will become a run button. Do this everytime you open the link. 
+Google will tell you that it is not authorised by Google. However, the script has been tested and is safe. Click "Run anyway" to continue. 
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+You can now input your searches inside the UI and click the run button.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
   },
 })
 ```
