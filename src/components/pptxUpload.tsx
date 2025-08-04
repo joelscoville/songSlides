@@ -1,6 +1,17 @@
 import { modifyPptx, SlideReplacements } from "../utils/pptxProcessor.ts";
 import { useState } from "react";
 
+function pptxDownload(modifiedPptx: Blob){
+        // Trigger download
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(modifiedPptx);
+        link.download = "Updated_Slides.pptx";
+        link.click();
+
+        URL.revokeObjectURL(link.href)
+        
+}
+
 export default function UploadPPTX() {
     const [file, setFile] = useState<File | null>(null);
 
@@ -30,12 +41,8 @@ export default function UploadPPTX() {
         }
         try {
             const modifiedPptx = await modifyPptx(file, 1, slideRelacement); 
-            
-            // Trigger download
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(modifiedPptx);
-            link.download = "Updated_Slides.pptx";
-            link.click();
+            pptxDownload(modifiedPptx)
+
         } catch (error) {
             console.error("Error modifying PPTX:", error)
         }
